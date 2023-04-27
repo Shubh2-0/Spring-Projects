@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+ <!-- THIS IS OUR BEAN -->
+ 
+ 
+ 
+  <!-- 
+  FIRST APPROACH
+  <bean class="com.masai.model.Student" name="student1">
+  <property name="id"><value>1</value></property>
+  <property name="name"><value>Shubham</value></property>
+  <property name="address"><value>Indore</value></property>
+  </bean> 
+  -->
+
+  <!-- 
+  SECOND APPROACH
+ <bean class="com.masai.model.Student" name="student1">
+ <property name="id" value="2"/>
+ <property name="name" value="Shiva"/>
+ <property name="address" value="Banglore"/>
+ </bean>
+   -->
+   
+   
+ <bean class="com.masai.model.Student" name="student1" p:id="1" p:name="Ram" p:address="Baglore" />
+ 
+ 
+ 
+ 
+ 
+ <bean class="com.masai.model.Car" name="car1" 
+ p:idNumber="3837" p:modelName="Toyota" 
+ p:compnayName='Maruti' p:price="600000" 
+ p:yearOfLuanching="2023"  />
+ 
+ 
+<bean class="com.masai.model.RollNumbers" name="numbers">
+
+<property name="rollNumbers">
+<list>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+</list>
+</property>
+
+<property name="setOfNumbers">
+
+<set>
+<value>5</value>
+<value>5</value>
+<value>6</value>
+<value>7</value>
+<value>8</value>
+<value>9</value>
+</set>
+
+</property>
+
+
+</bean>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</beans>

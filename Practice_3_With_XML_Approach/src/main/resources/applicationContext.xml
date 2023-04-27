@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:c="http://www.springframework.org/schema/c" 
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+
+<bean class="com.masai.demo.Student" id="st1">
+<constructor-arg value="Shivansh"/>
+<constructor-arg value="23"/>
+<constructor-arg value="Indore"/>
+</bean>
+
+
+<!-- FIRST APPROACH 
+<bean class="com.masai.demo.Book" id="b1">
+<constructor-arg value="You can WIN"/>
+<constructor-arg value="392"/>
+</bean>
+
+<bean class="com.masai.demo.Student2" id="st2">
+<constructor-arg value="Karan"/>
+<constructor-arg value="24"/>
+<constructor-arg ref="b1"/>
+</bean> 
+-->
+
+<!-- SECOND APPROACH -->
+<bean class="com.masai.demo.Book" id="b1" c:name="You can Win" c:price="481"/>
+<bean class="com.masai.demo.Student2" id="st2" c:name="Shivansh" c:age="23" c:b-ref="b1"/>
+ 
+</beans>

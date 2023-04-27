@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+	 xmlns:c="http://www.springframework.org/schema/c" 
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+<bean class="com.masai.EmployeeSetter" id="emp1" p:id="1" p:name="Jayant" p:city="Banglore" p:salary="30000"/>
+<bean class="com.masai.EmployeeSetter" id="emp2" p:id="2" p:name="Kunal" p:city="Patna" p:salary="50000"/>
+<bean class="com.masai.EmployeeSetter" id="emp3" p:id="3" p:name="Rajiv" p:city="Agra" p:salary="20000"/>
+ 
+ <bean class="com.masai.EmployeeConstructorArg" id="emp4" c:id="4" c:name="Karan" c:city="Mumbai" c:salary="23000"/>
+ <bean class="com.masai.EmployeeConstructorArg" id="emp5" c:id="5" c:name="Shivansh" c:city="Banglore" c:salary="80000"/>
+
+<bean class="com.masai.Demo" id="d1">
+<property name="employees">
+<list> 
+<ref bean="emp1"/>
+<ref bean="emp2"/>
+<ref bean="emp3"/>
+</list>
+</property>
+
+<property name="employees2">
+<list>
+<ref bean="emp4"/>
+<ref bean="emp5"/>
+</list>
+</property>
+
+</bean>
+
+
+
+</beans>

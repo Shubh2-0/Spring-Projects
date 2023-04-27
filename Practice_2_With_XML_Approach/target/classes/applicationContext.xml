@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+<bean id="st1" class="com.masai.model.Student" 
+p:id="1"
+p:name="Shiva"
+p:address="Banglore"
+ />
+ 
+
+<bean id="st2" class="com.masai.model.Student" 
+p:id="2"
+p:name="Paresh"
+p:address="Shrinagar"
+ />
+ 
+<bean id="st3" class="com.masai.model.Student" 
+p:id="3"
+p:name="Lakhan"
+p:address="Agra"
+ /> 
+ 
+
+<bean id="t1" class="com.masai.model.Teacher">
+<property name="name" value="Ratan Lal Gupta" />
+<property name="st"  ref="st1"/>
+</bean> 
+ 
+ 
+ 
+ <bean id="t2" class="com.masai.model.Teacher2">
+ <property name="name" value="Ratan Lal Gupta"/>
+ <property name="students">
+ <list>
+<ref bean="st1"/>
+<ref bean="st2"/>
+<ref bean="st3"/>
+ </list>
+ </property>
+ </bean>
+ 
+ 
+ 
+</beans>

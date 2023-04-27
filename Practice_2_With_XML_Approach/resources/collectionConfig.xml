@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+
+	<bean class="com.masai.model.Employee" name="emp1">
+		<property name="name" value="Shiva" />
+
+		<property name="phones">
+			<list>
+				<value>9344728822</value>
+				<value>4894845454</value>
+				<value>3873948934</value>
+				<value>4894655690</value>
+			</list>
+		</property>
+
+
+		<property name="addresses">
+			<set>
+				<value>Indore</value>
+				<value>Jaipur</value>
+				<value>Goa</value>
+				<value>Shimla</value>
+				<value>Ujjain</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			 <map>
+			 <entry key="java" value="3 Month" />
+			 <entry key="HTML" value="1 Month"/>
+			 <entry key="JavaScript" value="1.5 Month"/>
+			 
+			 </map>
+		</property>
+		
+	   <property name="userInfo">
+	   
+	   <props>
+	   <prop key="username">Shiva</prop>
+	   <prop key="password">shiv1234</prop>
+	   </props>
+	   
+	   
+	   </property>
+
+
+
+	</bean>
+
+
+
+
+</beans>
