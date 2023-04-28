@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+	   xmlns:c="http://www.springframework.org/schema/c" 
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd 
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+<context:annotation-config />
+
+<bean class="com.masai.demo.Teacher" id="t1" p:name="Kapil Agrawal" p:id="9228" p:courseName="SB101" />
+<bean class="com.masai.demo.Teacher" id="t2" p:name="Ratan Lal Gupta" p:id="4743" p:courseName="SB201" />
+
+
+<bean class="com.masai.demo.Student" id="st1" p:name="Hemant" p:age="27" p:rollNo="2" p:city="Agra"/>
+
+ 
+</beans>

@@ -2,6 +2,7 @@ package com.masai;
 
 public class Passenger {
     
+    
     private int id;
     private String name;
     private int age;
@@ -12,13 +13,7 @@ public class Passenger {
    }
 
 
-    public Passenger(int id, String name, int age, Bus bus) {
-	this.id = id;
-	this.name = name;
-	this.age = age;
-	this.bus = bus;
-    }
-    
+
     
 
 
