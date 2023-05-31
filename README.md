@@ -20,7 +20,7 @@ To run any of the projects in this repository, follow these steps:
 
 1. Clone the repository using the following command:
    ```
-   git clone https://github.com/your-username/spring-projects.git
+   git clone https://github.com/Shubh2-0/Spring-Projects-.git
    ```
 
 2. Navigate to the specific project you want to explore:
